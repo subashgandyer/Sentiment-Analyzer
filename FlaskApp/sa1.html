@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+	<body>
+		<form align='center' action="{{ url_for('Analyze') }}" method="post">
+			<h1>Welcome to the Results Page</h1><br>
+			<br><h3>Loaded model has done its job already !!!<br>
+			Score is also computed. <br>
+			Please look in the terminal for accuracy score.</h3>
+			<br><br>
+			<input type="text" name="text" placeholder="Enter the review text here" /><br><br>
+    		<input type="submit" value="Hit It" />
+		</form>
+	</body>

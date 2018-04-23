@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <body>
+   
+
+   <h3 align='center'>Sentiment Analysis of Zomato Reviews</h3>
+
+      <table align='center' border = 1>
+         {% for key, value in result.iteritems() %}
+            
+            <tr>
+               <th> REVIEW </th>
+               <th> POLARITY </th>
+            </tr>
+
+            <tr>
+               <td> {{ key }} </td>
+               <td> {{ value }} </td>
+            </tr>
+            
+         {% endfor %}
+      </table>
+
+      <div align='center'>
+            <h5><a href='Analyze.html'>Click to enter another review</a></h5>
+      </div>
+
+      
+   </body>
+</html>

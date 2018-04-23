@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="static/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="static/css/style.css"> <!-- Resource style -->
+	<script src="static/js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Sentiment Analysis of Reviews | Subash Gandyer</title>
+</head>
+<body>
+	<form class="cd-form floating-labels" method="post" action="{{ url_for('Analyze') }}">
+		<fieldset>
+			<legend align='center'>SENTIMENT ANLAYSIS OF REVIEWS</legend>
+
+			<div class="error-message">
+				<p>Please enter a review about your favorite restaurant</p>
+			</div>
+
+			<!-- <div class="icon">
+				<label class="cd-label" for="cd-name">Restaurant Name</label>
+				<input class="user" type="text" name="cd-name" id="cd-name" required>
+		    </div>  -->
+
+			<div class="icon">
+				<label class="cd-label" for="cd-textarea">Review</label>
+      			<textarea class="message" name="text" id="text" required></textarea>
+			</div>
+
+			<div>
+		      	<input type="submit" value="Analyze this">
+		    </div>
+
+		     <!-- <div class="pos">
+				<p>The Polarity of your review</p>
+			</div>
+ -->
+
+		    <!-- {% for key, value in result.iteritems() %}
+		    <div class="pos">
+				<p>The Polarity of your review " <b> {{ key }} </b> " is " <b> {{ value }} </b> " </p>
+			</div>
+			{% endfor %} -->
+
+		</fieldset>
+		
+            
+            <!-- <tr>
+               <th> REVIEW </th>
+               <th> POLARITY </th>
+            </tr>
+
+            <tr>
+               <td> {{ key }} </td>
+               <td> {{ value }} </td>
+            </tr> -->
+            
+         
+		<fieldset>
+			{% for key, value in result.iteritems() %}
+		    <div class="pos">
+				<p>The Polarity of your review " <b> {{ key }} </b> " is " <b> {{ value }} </b> " </p>
+			</div>
+			{% endfor %}
+		</fieldset>
+
+		
+	</form>
+<script src="static/js/jquery-2.1.1.js"></script>
+<script src="static/js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

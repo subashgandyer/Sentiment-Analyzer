@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+	<body>
+		<form align='center' action="{{ url_for('Analyze') }}" method="post">
+			<br><h1>Sentiment Analysis of Reviews</h1><br>
+			<h3>Enter the review for knowing its polarity (+VE or -VE)</h3> <br><br>
+			<input type="text" name="text" placeholder="Enter the review text here" width="400 px"/>
+			<br><br><br>
+    		<input type="submit" value="   Analyze   " />
+		</form>
+	</body>
